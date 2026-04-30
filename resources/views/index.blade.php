@@ -22,7 +22,7 @@
 <link href="{{ asset('assets/vendor/aos/aos.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/vendor/glightbox/css/glightbox.min.css') }}" rel="stylesheet">
 <link href="{{ asset('assets/vendor/swiper/swiper-bundle.min.css') }}" rel="stylesheet">
-
+{{-- <link href="{{ asset('assets/css/style.css') }}" rel="stylesheet"> --}}
 <link href="{{ asset('assets/css/main.css') }}" rel="stylesheet">
 
 </head>
@@ -84,7 +84,7 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <img src="assets/img/formalimg.jpeg" alt="" data-aos="fade-in" class="">
+      <img src="assets/img/panda.jpg" alt="" data-aos="fade-in" class="">
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <h3>Rishabh Chaurasiya</h3>
@@ -563,7 +563,7 @@ I am a responsible and hardworking individual who believes in continuous growth.
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="600">
             <div class="icon flex-shrink-0"><i class="bi bi-calendar4-week"></i></div>
             <div>
-              <h4 class="title"><a href="service-details.html" class="stretched-link">. Video Making & Editing</a></h4>
+              <h4 class="title"><a href="service-details.html" class="stretched-link">Video Making & Editing</a></h4>
               <p class="description">I create and edit engaging videos, focusing on clean visuals, smooth transitions, and impactful storytelling.</p>
             </div>
           </div><!-- End Service Item -->
