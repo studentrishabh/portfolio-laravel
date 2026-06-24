@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Api\ContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -8,12 +8,25 @@ use Illuminate\Support\Facades\Route;
 | API Routes
 |--------------------------------------------------------------------------
 |
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
+| These routes are loaded by RouteServiceProvider with the "api" middleware
+| group, prefixed with /api automatically.
+|
+| The Vue frontend communicates with this API via Axios.
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
+// Health check endpoint (useful for deployment verification)
+Route::get('/health', function () {
+    return response()->json([
+        'status'  => 'ok',
+        'service' => 'Rishabh Portfolio API',
+        'version' => '1.0.0',
+        'time'    => now()->toDateTimeString(),
+    ]);
 });
+
+// Contact Form Submission
+// POST /api/contact
+// Validates, stores message in MySQL, returns JSON response
+Route::post('/contact', [ContactController::class, 'store'])
+     ->name('api.contact.store');

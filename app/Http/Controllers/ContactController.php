@@ -20,7 +20,7 @@ class ContactController extends Controller
             Mail::raw(
                 "Name: {$request->name}\nEmail: {$request->email}\nMessage: {$request->message}",
                 function ($msg) use ($request) {
-                    $msg->to('your_email@gmail.com')
+                    $msg->to('rishabh.chaurasiya011@gmail.com')
                         ->subject($request->subject)
                         ->replyTo($request->email);
                 }
